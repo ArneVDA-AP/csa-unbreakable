@@ -7,14 +7,17 @@ permissions:
   contents: read
 
 jobs:
-  secrets:   # DSOMM activity: fill in after checking the source
+  secrets:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
-      - uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Gitleaks
+        run: |
+          VER=8.24.3
+          curl -sSL https://github.com/gitleaks/gitleaks/releases/download/v${VER}/gitleaks_${VER}_linux_x64.tar.gz | tar -xz gitleaks
+          ./gitleaks git --redact -v --config .gitleaks.toml
 
   sca:       # DSOMM activity: fill in after checking the source
     runs-on: ubuntu-latest
