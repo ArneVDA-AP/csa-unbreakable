@@ -1,0 +1,8 @@
+[extend]
+useDefault = true
+
+[[rules]]
+id = "hardcoded-password-config"
+description = "Hardcoded password in compose or appsettings"
+regex = '''(?i)(password|passwd|pwd)["']?\s*[:=]\s*["']?[^\s"'$\{][^\s"';]{2,}'''
+path = '''(docker-compose.*\.ya?ml|appsettings.*\.json)$'''
