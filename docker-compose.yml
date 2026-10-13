@@ -14,7 +14,7 @@ services:
     environment:
       POSTGRES_DB: unbreakable
       POSTGRES_USER: unbreakable
-      POSTGRES_PASSWORD: Unbr3akable!2026
+      POSTGRES_PASSWORD: Unbr3akable!20260
     volumes:
       - dbdata:/var/lib/postgresql/data
     restart: unless-stopped
