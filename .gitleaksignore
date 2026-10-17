@@ -1,13 +1,11 @@
 # Baseline: findings of the first full-history scan on the unchanged starter app.
-
-# Hardcoded database password (POSTGRES_PASSWORD and connection strings).
-
+# hardcoded password:
 1e91d660abb6141905476d6ea826e6f67342bc19:docker-compose.yml:hardcoded-password-config:17
 836c752ccc5c668f68447a8147c13088f0632724:docker-compose.yml:hardcoded-password-config:7
 836c752ccc5c668f68447a8147c13088f0632724:docker-compose.yml:hardcoded-password-config:17
 836c752ccc5c668f68447a8147c13088f0632724:app/appsettings.json:hardcoded-password-config:11
 
-# Real API key in appsettings.json.
+# API key in appsettings.json:
 836c752ccc5c668f68447a8147c13088f0632724:app/appsettings.json:generic-api-key:15
 
 # Assignment tells us to accept the findings of these baseline risks (for now).
